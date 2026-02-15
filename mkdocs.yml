@@ -1,0 +1,9 @@
+site_name: Algo foundations
+theme:
+  name: material #readthedocs #mkdocs
+
+nav:
+  - Home: index.md
+  # - Asymptotics: asymptotics.md
+  # - Sorting: sorting.md
+  # - Graphs: graphs.md
