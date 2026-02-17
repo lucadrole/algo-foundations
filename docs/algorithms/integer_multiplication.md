@@ -1,4 +1,3 @@
-
 # Integer Multiplication
 
 ## Problem Statement
@@ -14,7 +13,27 @@ Let's frame some primitive operations:
 - multiplying two single-digit numbers
 - adding a 0 at the beginning or end of a number
 
+Complexity analysis: computing a partial product requires $n$ multiplications and $n$ addition (at most). At most $2n$ primitives. With $n$ partial products we need $2n^2$ primitives. To add them up we need a comparable number.
 
+**Total operations:** 
+
+$$T \leq 4n^2$$
+
+>"Perhaps the most important principle for the good algorithm designer is to refuse to be content.” - Ao, Hopcroft, Ullman
+
+## Doing better: Karatsuba Multiplication
+
+Given two 4-digit numbers, split them by digits (e.g., 5678 becomes $a=56$ and $b=78$).
+
+1. $a \cdot c$
+2. $b \cdot d$
+3. $(a+b) \cdot (c+d)$
+4. Step 3 - Step 1 - Step 2
+5. $10^4 \cdot \text{Step 1} + 10^2 \cdot \text{Step 4} + \text{Step 2}$
+
+Why does this work? We will see later.
+
+## Recursive Algortihm
 
 
 References:

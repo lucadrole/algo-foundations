@@ -2,11 +2,22 @@ site_name: Algo foundations
 theme:
   name: material #readthedocs #mkdocs
 
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
 nav:
   - Home: index.md
   - Resources: resources.md
   - Foundations:
     - Why Algorithms: foundations/why_algorithms.md
+    - Glossary: foundations/glossary.md
+  - Algorithms:
+    - Integer Multiplication: algorithms/integer_multiplication.md
   # - Asymptotics: asymptotics.md
   # - Sorting: sorting.md
   # - Graphs: graphs.md
